@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: filebridge-backend
+
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/filebridge}
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: ${MAX_FILE_SIZE:100MB}
+      max-request-size: ${MAX_REQUEST_SIZE:105MB}
+
+server:
+  port: ${SERVER_PORT:8080}
+
+filebridge:
+  jwt:
+    secret: ${JWT_SECRET:FilebridgeSuperSecretJwtSigningKeyMustBeAtLeast256BitsLongForHmacSha256Security}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000} # 24 hours
+  storage:
+    local:
+      base-path: ${STORAGE_PATH:${user.home}/filebridge-storage}
+  max-storage-bytes: ${MAX_STORAGE_BYTES:10737418240}  # 10 GB default
+
+logging:
+  level:
+    com.filebridge: DEBUG
