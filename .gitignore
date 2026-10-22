@@ -1,3 +1,4 @@
+/start-dev.bat
 # Backend build artifacts
 backend/target/
 backend/.mvn/
@@ -17,6 +18,9 @@ frontend/pnpm-debug.log*
 # Local storage & data (never track physical uploaded files)
 FileBridgeStorage/
 filebridge-storage/
+MongoData/
+mongo-data/
+.mongo-data/
 *.tmp
 
 # OS & IDE files
