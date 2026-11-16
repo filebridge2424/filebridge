@@ -1,0 +1,25 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/filebridge_test
+
+filebridge:
+  jwt:
+    secret: FilebridgeSuperSecretJwtSigningKeyMustBeAtLeast256BitsLongForHmacSha256Security
+    expiration-ms: 86400000
+  storage:
+    type: LOCAL
+    local:
+      base-path: ${java.io.tmpdir}/filebridge-test-storage
+  supabase:
+    url: https://yforzdoqhocjorkshzfx.supabase.co
+    secret-key: ""
+    bucket: filebridge-files
+  subscription:
+    free-storage-bytes: 104857600
+    premium-storage-bytes: 524288000
+    premium-price-inr: 199
+  razorpay:
+    key-id: rzp_test_mock_key_12345
+    key-secret: mock_secret_key_67890
+  max-storage-bytes: 10737418240

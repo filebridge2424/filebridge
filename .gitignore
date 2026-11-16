@@ -1,0 +1,38 @@
+/start-dev.bat
+# Backend build artifacts
+backend/target/
+backend/.mvn/
+backend/*.log
+.env
+.env.*
+!.env.example
+
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Frontend dependencies and builds
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Local storage & data (never track physical uploaded files)
+FileBridgeStorage/
+filebridge-storage/
+MongoData/
+mongo-data/
+.mongo-data/
+*.tmp
+
+# OS & IDE files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
